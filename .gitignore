@@ -1,0 +1,9 @@
+/ebin
+/deps
+/test
+/docs
+/log
+/EXT
+erl_crash.dump
+*.ez
+.DS_Store
