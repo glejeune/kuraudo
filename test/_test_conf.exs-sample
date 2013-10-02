@@ -1,0 +1,25 @@
+[ 
+  # This is an example of a configuration file for tests.
+  
+  # `skip` allow you to give a list of tests to skip.
+  skip: [:cimi, :aws],
+
+  # Here are some example of IaaS configuration
+  openstack: [
+  	username: "my_os_username",
+  	password: "mY_0s_p4ssw0rd",
+  	tenant: "my_os_tenant",
+  	auth_url: "http://localhost:5000/v2.0"
+  ],
+  aws: [
+  	access_key_id: "MYAWSACCESSKEYID",
+  	secret_access_key: "mY4wss3cr3t4cc3ssk3Y",
+    ec2_url: "https://ec2.amazonaws.com/",
+    s3_url: "https://s3.amazonaws.com/"
+  ],
+  cimi: [
+  	username: "my_cimi_username",
+    password: "mY_c1m1_p4ssw0rd",
+    url: "http://localhost:8080/cloudEntryPoint"
+  ]
+]

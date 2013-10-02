@@ -41,10 +41,7 @@ Kuraudo is a multi-cloud framework for [Elixir](http://elixir-lang.org).
 * `password` : OpenStack password (needed)
 * `tenant_id` || `tenant_name` : OpenStack tenant ID or name (needed)
 * `auth_method` : Type of authentication (:password, :key, :rax_kskey) (default : :password)
-* `scheme` : Connection scheme (needed)
-* `host` : Connection host (needed)
-* `path` : Connection path (needed)
-* `port` : Connection port (needed)
+* `auth_url` : Authentication URL
 * `http_timeout` : HTTP timeout (ms) (default : 60000)
 
 ### CIMI

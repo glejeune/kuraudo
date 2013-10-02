@@ -7,10 +7,7 @@ defrecord Kuraudo.OpenStack.Driver,
   tenant_id: nil,
   auth_method: :password, # :password (default), :key or :rax_kskey
 
-  scheme: nil,
-  host: nil,
-  path: nil,
-  port: nil,
+  auth_url: nil,
 
   tenant_enabled: false,
   token_id: nil,

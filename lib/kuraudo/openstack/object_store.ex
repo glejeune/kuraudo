@@ -80,7 +80,11 @@ defimpl Kuraudo.ObjectStore, for: Kuraudo.OpenStack.Driver do
 
   def delete(driver, bucket, :all) do
     files = Enum.reduce(bucket.objects, [], fn(object, list) -> list ++ [object.name] end)
-    delete(driver, bucket, files)
+    if length(files) > 0 do
+      delete(driver, bucket, files)
+    else
+      bucket
+    end
   end
 
   def delete(driver, bucket, files) when is_list(files) and length(files) > 0 do

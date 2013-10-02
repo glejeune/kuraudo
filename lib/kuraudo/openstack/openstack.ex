@@ -55,10 +55,7 @@ defmodule Kuraudo.OpenStack do
 
   def get_url(driver, endpoint // :identity, path // "") do
     case endpoint do
-      :identity -> case driver.port do
-        nil -> "#{driver.scheme}://#{driver.host}#{driver.path}"
-        _ -> "#{driver.scheme}://#{driver.host}:#{driver.port}#{driver.path}"
-      end
+      :identity -> driver.auth_url
       ep -> case Dict.get(driver.service_catalog, "#{ep}") do
         nil -> raise Kuraudo.ProviderError, provider: driver.name, code: 0, message: "Can't find #{endpoint} URL in catalog"
         url -> url
